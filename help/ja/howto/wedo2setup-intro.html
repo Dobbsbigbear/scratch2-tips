@@ -1,0 +1,21 @@
+<html> <head><meta charset=utf-8><link href=../../../css/base.css rel=stylesheet><link href=../../../css/modules/bootstrap-accordion.css rel=stylesheet><link href=../../../css/pages/help.css rel=stylesheet><link href=../../../css/modules/tabs.css rel=stylesheet><link href=../../../css/modules/icons.css rel=stylesheet><link href=../../../css/pages/tips.css rel=stylesheet><link href=../../../css/modules/tip-bar.css rel=stylesheet><script type=text/javascript src=../../../js/jquery.min.js></script></head> <body id=tips-standalone class> <div id=tip-content> <div class=multi-step> <div class="progress-bar in-progress"> <span id=tip-progress-bar style=width:%></span> </div> <div class=tutorial-dropdown-menu-bar> <h3 class=tutorial-menu-name> <a href=wedo2setup-intro.html>LEGO WeDo 2.0 拡張機能のセットアップ</a> </h3> <div class=tutorial-dropdown-menu> <nav> <a href=#.html id=tutorial-menu-icon class=dropdown-closed></a> <ul style=display:none;> <li class=page-link> <a href=wedo2mac-intro.html> <div class="index-num ">1</div> Mac用LEGO WeDo 2.0のセットアップ </a> </li> <li class=page-link> <a href=wedo2win-intro.html> <div class="index-num ">2</div> Windows用LEGO WeDo 2.0のセットアップ </a> </li> </ul> </nav> </div> </div> <div class=navcenter> </div> <h2>LEGO WeDo 2.0 拡張機能のセットアップ</h2> <p>これらの手順を使用して、LEGO WeDo 2.0をScratchに設定します。</p> <p>メモ: LEGO WeDo 2.0拡張機能は、現在、Mac OSXまたはWindows 10以上で動作するBluetooth LEが付属するコンピュータで使用できます。</p> <div class="steps last"> <p><img src=../../../images/help/wedo2-hub.png></p> <p></p> <a class=next-step-button href=wedo2mac-intro.html>Macコンピュータを使っています。</a> <p></p> <a class=next-step-button href=wedo2win-intro.html>Windowsコンピュータを使っています。</a> <p>&nbsp;</p> <div class=scroll-gradient></div> </div> </div> <script type=text/javascript>
+      var Scratch = Scratch || {};
+      Scratch.INIT_DATA = Scratch.INIT_DATA || {};
+      Scratch.INIT_DATA.COI = {
+        TARGET_DOMAIN: "http://scratch.mit.edu"
+      };
+    </script> <script type=text/javascript src=../../../js/lib/json2.js></script> <script type=text/javascript src=../../../js/lib/underscore-min.js></script> <script type=text/javascript src=../../../js/lib/backbone-min.js></script> <script type=text/javascript src=../../../js/bootstrap-accordion.js></script> <script type=text/javascript src=../../../js/bootstrap-tab.js></script> <script type=text/javascript src=../../../js/views/backbone-extensions.js></script> <script type=text/javascript src=../../../js/views/cross-origin-interface.js></script> <script type=text/javascript src=../../../js/views/tips.js></script> <script type=text/javascript>
+      /* Initialize progress bar and navcenter translation */
+      $(function($){
+        $(document).on('click', '#tutorial-menu-icon', function() {
+            $('.tutorial-dropdown-menu nav ul').toggle();
+            if ($('#tutorial-menu-icon').hasClass('dropdown-opened')) {
+                $('#tutorial-menu-icon').removeClass('dropdown-opened');
+                $('#tutorial-menu-icon').addClass('dropdown-closed');
+            } else {
+                $('#tutorial-menu-icon').removeClass('dropdown-closed');
+                $('#tutorial-menu-icon').addClass('dropdown-opened');
+            }
+        })
+      });
+    </script> </div></body> </html>

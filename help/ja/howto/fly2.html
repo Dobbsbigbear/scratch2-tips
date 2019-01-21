@@ -1,0 +1,21 @@
+<html> <head><meta charset=utf-8><link href=../../../css/base.css rel=stylesheet><link href=../../../css/modules/bootstrap-accordion.css rel=stylesheet><link href=../../../css/pages/help.css rel=stylesheet><link href=../../../css/modules/tabs.css rel=stylesheet><link href=../../../css/modules/icons.css rel=stylesheet><link href=../../../css/pages/tips.css rel=stylesheet><link href=../../../css/modules/tip-bar.css rel=stylesheet><script type=text/javascript src=../../../js/jquery.min.js></script></head> <body id=tips-standalone class> <div id=tip-content> <div class=multi-step> <div class="progress-bar in-progress"> <span id=tip-progress-bar style=width:20%></span> </div> <div class=tutorial-dropdown-menu-bar> <h3 class=tutorial-menu-name> <a href=fly-intro.html>キャラクターを飛ばそう</a> </h3> <div class=tutorial-dropdown-menu> <nav> <a href=#.html id=tutorial-menu-icon class=dropdown-closed></a> <ul style=display:none;> <li class=page-link> <a href=fly1.html> <div class="index-num ">1</div> キャラクターの選択 </a> </li> <li class=page-link> <a href=fly2.html> <div class="index-num active">2</div> 飛ぶ準備をする </a> </li> <li class=page-link> <a href=fly3.html> <div class="index-num ">3</div> 舞台背景を追加する </a> </li> <li class=page-link> <a href=fly4.html> <div class="index-num ">4</div> 舞台背景を移動させる </a> </li> <li class=page-link> <a href=fly5.html> <div class="index-num ">5</div> 見た目をスイッチする </a> </li> <li class=page-link> <a href=fly6.html> <div class="index-num ">6</div> 空を描く </a> </li> <li class=page-link> <a href=fly7.html> <div class="index-num ">7</div> インタラクティブにする </a> </li> <li class=page-link> <a href=fly8.html> <div class="index-num ">8</div> 空に浮遊物を追加する </a> </li> <li class=page-link> <a href=fly9.html> <div class="index-num ">9</div> カスタマイズと改造 </a> </li> <li class=page-link> <a href=fly10.html> <div class="index-num ">10</div> プロジェクトを共有 </a> </li> </ul> </nav> </div> </div> <div class=navcenter> <span class="navigate back"> <a href=fly1.html><img src=../../../images/help/tip-arrow-back.png>戻る</a> </span> <span class="navigate next"> <a href=fly3.html> 次へ <img src=../../../images/help/tip-arrow-forward.png> </a> </span> </div> <h2>飛ぶ準備をする</h2> <div class=steps> <p>キャラクターに何かをおしゃべりするよう指示するスクリプトを作ってください。：</p> <p><img src=../../../images/help/ja/fl-s2-i1.gif></p> <p>あなた自身の言葉を打ち込めます。</p> </div> <div class=steps> <p>緑の旗をクリックしてスクリプトを開始します。</p> <p><img src=../../../images/help/ja/int-green-flag.gif></p> </div> <div class="steps last"> <p><img src=../../../images/help/ja/fl-s2-i3.png></p> <p>スクリプトは次のようになります。:</p> <p><img src=../../../images/help/ja/fl-s2-i4.png></p> <a class=next-step-button href=fly3.html>次へ</a> </div> <div class=scroll-gradient></div> </div> </div> <script type=text/javascript>
+      var Scratch = Scratch || {};
+      Scratch.INIT_DATA = Scratch.INIT_DATA || {};
+      Scratch.INIT_DATA.COI = {
+        TARGET_DOMAIN: "http://scratch.mit.edu"
+      };
+    </script> <script type=text/javascript src=../../../js/lib/json2.js></script> <script type=text/javascript src=../../../js/lib/underscore-min.js></script> <script type=text/javascript src=../../../js/lib/backbone-min.js></script> <script type=text/javascript src=../../../js/bootstrap-accordion.js></script> <script type=text/javascript src=../../../js/bootstrap-tab.js></script> <script type=text/javascript src=../../../js/views/backbone-extensions.js></script> <script type=text/javascript src=../../../js/views/cross-origin-interface.js></script> <script type=text/javascript src=../../../js/views/tips.js></script> <script type=text/javascript>
+      /* Initialize progress bar and navcenter translation */
+      $(function($){
+        $(document).on('click', '#tutorial-menu-icon', function() {
+            $('.tutorial-dropdown-menu nav ul').toggle();
+            if ($('#tutorial-menu-icon').hasClass('dropdown-opened')) {
+                $('#tutorial-menu-icon').removeClass('dropdown-opened');
+                $('#tutorial-menu-icon').addClass('dropdown-closed');
+            } else {
+                $('#tutorial-menu-icon').removeClass('dropdown-closed');
+                $('#tutorial-menu-icon').addClass('dropdown-opened');
+            }
+        })
+      });
+    </script> </body> </html>
